@@ -48,3 +48,20 @@ export const OtherPart = styled.div`
   font-size: 1.8rem;
   margin: 2rem;
 `;
+
+export const Button = styled.button`
+  background: ${({ theme }) => theme.colors.navbarBgColor};
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  margin: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  font-weight:bold;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+`;

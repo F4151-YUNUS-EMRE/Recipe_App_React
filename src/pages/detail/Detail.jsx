@@ -1,11 +1,12 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
-import { DetailContainer, DetailPart, HeaderContainer, ImgContainer, IngContainer, OtherPart } from './Detail.style';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Button, DetailContainer, DetailPart, HeaderContainer, ImgContainer, IngContainer, OtherPart } from './Detail.style';
 import diet from "../../assets/diet.svg";
 
 
 const Detail = () => {
   const {state}=useLocation()
+  const navigate=useNavigate()
   console.log(state);
   return (
     <DetailContainer>
@@ -48,11 +49,11 @@ const Detail = () => {
         </OtherPart>
 
         <ImgContainer>
-        <img src={state?.image} />
+          <img src={state?.image} />
         </ImgContainer>
 
         <IngContainer>
-          {state?.ingredientLines?.map((ingredient,index)=>{
+          {state?.ingredientLines?.map((ingredient, index) => {
             return (
               <div>
                 <p>
@@ -62,8 +63,8 @@ const Detail = () => {
             );
           })}
         </IngContainer>
-         
       </DetailPart>
+      <Button onClick={() => navigate(-1)}>BACK</Button>
     </DetailContainer>
   );
 }

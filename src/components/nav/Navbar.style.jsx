@@ -13,9 +13,9 @@ export const Brand = styled(Link)`
   color: ${({ theme }) => theme.colors.logoColor};
   text-decoration: none;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 2.2rem;
   span {
-    font-weight: 400;
+    font-weight: 600;
     color: ${({ theme }) => theme.colors.mainColor};
   }
 `;

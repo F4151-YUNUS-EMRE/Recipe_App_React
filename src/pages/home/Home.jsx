@@ -20,7 +20,7 @@ const Home = () => {
   const getData=async()=>{
     if(query){
       try {
-        const { data } = await axios(url);
+        const  {data}  = await axios(url);
         console.log(data);
         setRecipes(data.hits);
       } catch (error) {

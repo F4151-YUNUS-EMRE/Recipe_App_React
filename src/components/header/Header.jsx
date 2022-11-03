@@ -27,9 +27,7 @@ const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
           onChange={(e) => setSelectedMeal(e.target.value)}
         >
           {mealType.map((meal, index) => (
-            <option key={index} value={meal}>
-              {" "}
-              {meal}{" "}
+            <option key={index} value={meal}>{meal}
             </option>
           ))}
         </Select>
